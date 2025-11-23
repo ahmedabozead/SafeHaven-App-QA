@@ -114,8 +114,8 @@ This is **production-grade QA documentation** used exactly like this in real com
 **Made with zero tolerance for broken flows and security holes**
 
 **Ahmed Abozead** • Manual QA Engineer  
-Email: ahmedwal032@gmail.com  
-GitHub: [github.com/ahmed-abozead](https://github.com/ahmed-abozead)  
+Email: ahmednb34963@gmail.com  
+GitHub: https://github.com/ahmedabozead  
 Updated: November 24, 2025
 
 **Thank you for reviewing! Ready for collaboration or job offers**

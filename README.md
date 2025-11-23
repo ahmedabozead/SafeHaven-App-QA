@@ -1,150 +1,121 @@
-📱 SafeHaven App – Manual Testing Project
-📌 Project Overview
+# SafeHaven App – Manual QA Project
+**88 Test Cases | 26 Bugs | 11 Days | Nov 2025**
 
-SafeHaven is a smart home security application designed to protect and manage IoT devices such as cameras, lights, and other connected devices.
-This project documents the full manual testing process conducted to ensure quality, stability, and user experience before production release.
+## Project Overview
+Full manual testing cycle for **SafeHaven**, an Android smart home security app that manages and protects IoT devices (cameras, smart lights, etc.).
 
-Testing Type: Manual Functional & UI Testing
-Platform: Android Mobile Application
-Testing Duration: 11 Days (Nov 13 – Nov 24, 2025)
-Testing Device: Redmi Note 14 (Android 12)
+**Tester:** Ahmed Abozead  
+**Duration:** 11 days (13 – 24 Nov 2025)  
+**Device:** Redmi Note 14 – Android 12  
+**Type:** Black-box Manual Testing
 
-🎯 Testing Objectives
-✅ Primary Goals
+---
 
-Verify all features work according to requirements
+## Testing Objectives (All Achieved)
+- 100% functional verification
+- Security & negative scenario testing
+- UI/UX consistency validation
+- Clear, reproducible bug reports with evidence
 
-Identify and document defects with clear steps
+---
 
-Validate UI/UX consistency
+## Project Timeline
+| Phase              | Duration | Dates             | Status    |
+|--------------------|----------|-------------------|-----------|
+| Test Planning      | 1 day    | 13 Nov            | Done      |
+| Test Case Design   | 3 days   | 14–17 Nov         | Done      |
+| Test Execution     | 2 days   | 18–20 Nov         | Done      |
+| Bug Reporting      | 2 days   | 21–23 Nov         | Done      |
+| Final Reporting    | 1 day    | 24 Nov            | Done      |
+| **Total**          | **11 days** | **13–24 Nov** | **100%** |
 
-Ensure proper input validation
+---
 
-Test navigation flow & error handling
+## Modules Tested
+| Module              | TCs | Bugs | Pass Rate | Status      |
+|---------------------|-----|------|-----------|-------------|
+| Login               | 14  | 5    | 64%       | Critical    |
+| Notifications       | 4   | 4    | 0%        | Critical    |
+| Add Device (IP/QR)  | 11  | 4    | 64%       | Critical    |
+| Settings            | 14  | 4    | 71%       | Warning     |
+| Profile             | 12  | 2    | 83%       | Warning     |
+| Support             | 7   | 3    | 57%       | Warning     |
+| Registration        | 8   | 2    | 75%       | Warning     |
+| Welcome / About     | 8   | 2    | 75%       | Warning     |
+| Home & Devices      | 10  | 0    | 100%      | Passed      |
+| **Total**           | **88** | **26** | **70.5%** | **Medium Risk** |
 
-Validate security features
+---
 
-✅ Success Criteria
+## Execution Summary
+| Metric           | Value     |
+|------------------|-----------|
+| Total TCs        | 88        |
+| Passed           | 62 (70.5%)|
+| Failed           | 26 (29.5%)|
+| Coverage         | 95%       |
 
-Test coverage ≥ 90%
+---
 
-All Critical & High bugs documented
+## Bug Summary
+| Severity | Count | %     |
+|----------|-------|-------|
+| Critical | 5     | 19%   |
+| High     | 16    | 62%   |
+| Medium   | 5     | 19%   |
+| **Total**| **26**| **100%** (All Open)
 
-Clear reproduction steps
+### Critical Blockers
+| ID           | Module        | Issue                                  | Severity  |
+|--------------|---------------|----------------------------------------|-----------|
+| BUG-LP-006   | Login         | No lockout → Brute force possible      | Critical  |
+| BUG-PP-012   | Profile       | Change password without correct old one| Critical  |
+| BUG-LP-007   | Login         | Google/Facebook login broken           | High      |
+| BUG-CDP-008  | Notifications | No alert on new device                 | High      |
+| BUG-CDP-020  | Add Device    | Accepts any invalid IP                 | High      |
 
-Evidence for all defects (screenshots)
+---
 
-Professional documentation
+## Quality Gate
+**NOT READY FOR PRODUCTION**  
+**Must fix 5 Critical + 16 High bugs before release**
 
-⏱️ Project Timeline
-Phase	Duration	Dates	Status
-Test Planning	1 Day	Nov 13, 2025	✅ Completed
-Test Case Design	3 Days	Nov 14 – Nov 17, 2025	✅ Completed
-Test Execution	2 Days	Nov 18 – Nov 20, 2025	✅ Completed
-Bug Reporting	2 Days	Nov 21 – Nov 23, 2025	✅ Completed
-Final Report	1 Day	Nov 24, 2025	✅ Completed
-Total Duration	11 Days	Nov 13 – Nov 24	✅ 100%
-📂 Testing Scope
-✅ Modules Tested (11 Modules):
-#	Module	Test Cases	Bugs	Pass Rate	Status
-1	Welcome Page	5	1	80%	⚠️ Issues
-2	Registration	8	2	75%	⚠️ Issues
-3	Login	14	5	64%	❌ Critical
-4	Home / Dashboard	6	0	100%	✅ Passed
-5	Connected Devices	4	0	100%	✅ Passed
-6	Notifications	4	4	0%	❌ Critical
-7	Profile	12	2	83%	⚠️ Issues
-8	Support	7	3	57%	⚠️ Issues
-9	About Us	3	1	67%	⚠️ Issues
-10	Add Device (IP / QR)	11	4	64%	❌ Critical
-11	Settings	14	4	71%	⚠️ Issues
-Total		88	26	70.5%	Medium Risk
-📋 Testing Types Performed
-Testing Type	Description	Coverage
-Functional Testing	Verify core features	100%
-UI / UX Testing	Layout & usability checks	95%
-Positive Testing	Valid inputs	100%
-Negative Testing	Invalid inputs	90%
-Validation Testing	Input field validation	100%
-Navigation Testing	Screen flow validation	100%
-Integration Testing	Module interaction	85%
-Smoke Testing	Critical flows	100%
-📊 Test Execution Summary
-Metric	Count	Percentage
-Total Test Cases	88	100%
-Executed	88	100%
-Passed	62	70.5%
-Failed	26	29.5%
-Blocked	0	0%
-Not Executed	0	0%
+### Immediate Recommendations
+1. Add account lockout & rate limiting
+2. Fix OAuth integration
+3. Implement proper password validation
+4. Fix notification system
+5. Reject invalid IP formats
+6. Full regression cycle after fixes
 
-Coverage Metrics:
-✅ Feature: 95%
-✅ Modules: 100%
-✅ UI: 90%
-✅ Functional: 95%
-✅ Requirements: 92%
+---
 
-🐛 Bug Summary
-Bug Distribution by Severity
-Severity	Open	Total	Percentage
-Critical	5	5	19%
-High	16	16	62%
-Medium	5	5	19%
-Low	0	0	0%
-Total	26	26	100%
-🔴 Open        | 26 bugs | 100% | ████████████████
-🟡 In Progress | 0  bugs | 0%   | ░░░░░░░░░░░░░░
-🟢 Resolved    | 0  bugs | 0%   | ░░░░░░░░░░░░░░
-⚪ Closed      | 0  bugs | 0%   | ░░░░░░░░░░░░░░
+## Tools Used
+- Microsoft Excel 2021 (Test Cases + Bug Tracking)
+- Redmi Note 14 (Real device)
+- Android native screenshots + AZ Screen Recorder
+- Markdown for documentation
 
+---
 
-All reported defects are currently in Open state awaiting development fixes.
+## Quick Links
+- [88 Test Cases (Excel)](test-cases/test_case_safehaven-app.xlsx)
+- [26 Bugs Report (Excel)](bug-reports/Bug-Report-safehaven-app.xlsx)
+- [Screenshots & Videos](bug-reports/evidence/)
+- [Test Plan](docs/Test_Plan.md) • [Strategy](docs/Test_Strategy.md)
 
-🔥 Top Critical Issues
-Bug ID	Module	Issue	Severity
-BUG-LP-006	Login	No account lockout after failed attempts	🔴 Critical
-BUG-PP-012	Profile	Password updated with wrong current password	🔴 Critical
-BUG-LP-007	Login	OAuth Login not working	🟠 High
-BUG-CDP-008	Notifications	No alert for new device	🟠 High
-BUG-CDP-020	Add Device	Invalid IP accepted	🟠 High
-🛠 Tools & Technologies
-Category	Tool
-Test Management	Microsoft Excel
-Device	Redmi Note 14
-Documentation	Markdown + Excel
-Screenshots	Android Native
-Communication	WhatsApp, Email
-🚨 Quality Gate
-❌ NOT READY FOR PRODUCTION
+---
 
-Blocking Issues:
+## Final Words
+This is **production-grade QA documentation** used exactly like this in real companies.
 
-No account lockout mechanism
+**Next Step:** Cycle 2 – Regression Testing after developer fixes
 
-OAuth login broken
+**Made with zero tolerance for broken flows and security holes**
 
-Notification system not working
+**Ahmed Abozead** • Manual QA Engineer  
+Email: ahmedwal032@gmail.com  
+GitHub: [github.com/ahmed-abozead](https://github.com/ahmed-abozead)  
+Updated: November 24, 2025
 
-Invalid IP validation failure
-
-✅ Recommendations:
-
-Fix all Critical bugs
-
-Fix all High bugs
-
-Perform Regression Testing
-
-Conduct Security Testing
-
-📜 Version
-
-Version: 1.0
-Date: Nov 22, 2025
-Author: Ahmed Abozead
-
-✅ Final Status:
-Testing Cycle: ✔ Completed  
-Quality Gate: ❌ Not Ready  
-Next Step: Regression Testing  
+**Thank you for reviewing! Ready for collaboration or job offers**

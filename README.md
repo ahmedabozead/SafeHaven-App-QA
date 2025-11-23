@@ -102,15 +102,17 @@
 ---
 
 ## 🐛 Defect Summary
+### Bug Distribution by Severity:
 
-Bug Distribution by Severity:
-Severity	Open	In Progress	Resolved	Total	Percentage
-Critical	5	0	0	5	19%
-High	16	0	0	16	62%
-Medium	5	0	0	5	19%
-Low	0	0	0	0	0%
-Total	26
-Status        Count    Percentage    Progress
+| Severity | Open | In Progress | Resolved | Total | Percentage |
+|----------|------|-------------|----------|-------|------------|
+| **Critical** | 5 | 0 | 0 | 5 | 19% |
+| **High** | 16 | 0 | 0 | 16 | 62% |
+| **Medium** | 5 | 0 | 0 | 5 | 19% |
+| **Low** | 0 | 0 | 0 | 0 | 0% |
+| **Total** | **26** | **0** | **0** | **26** | **100%** |
+```
+
 -------------------------------------------------
 🔴 Open         26       100%        ████████████████
 🟡 In Progress   0         0%        ░░░░░░░░░░░░░░
